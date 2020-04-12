@@ -2,9 +2,15 @@
 
 **Case study "Ordering system"**
 
-This is a fictional story. It takes a domain that many readers might find familiar and tries to demonstrate the process of eliciting, discovering and exploring user requirements on a system, generally known as "analysis". The perceived familiarity of the domain (taking customer orders) should hopefully make the story more comprehensible, while at the same time demonstrate how fragile such assumptions of familiarity could be.
+This is a fictional story.
+
+Although completely made-up, its goal is to illustrate faithfully the process of discovering the system requirements.
+
+It takes a domain that many readers might find familiar and tries to demonstrate eliciting, discovering and exploring user requirements on a system, generally known as "analysis". The perceived familiarity of the domain (taking customer orders) should hopefully make the story more comprehensible, while at the same time demonstrate how fragile such assumptions of familiarity could be.
 
 ---
+
+## Day 1
 
 You were just assigned to a new project. Alice is in charge of managing orders in the company and she has asked for a meeting with someone from IT to see if there's a way to help her improve things.
 
@@ -167,6 +173,8 @@ When you are taking the shower that evening, you recall that empty white box lab
 
 Maybe we could suggest customer names from previous orders as the user starts typing it in.
 
+## Day 2
+
 When pouring juice for the breakfast the next morning, you realize there is also the issue of the goods in the order line items. We should be able to help the user with entering the goods as well, since we surely must already know what we are selling.
 
 We should help with calculating the price as well, as the unit price should also be known, once the item is selected, and then the item price is simply a multiple of the quantity.
@@ -300,7 +308,7 @@ On the contrary, you vouch against keeping the Item price on the Order item, as 
 
 You explain your reasoning to Alice, who approves, and you end the meeting going for your regular job routine.
 
----
+## Day 3
 
 The next day Alice brings Bob to the meeting and explains, 'I was telling Bob about the new Ordering system we are discussing and he thinks that's a cool idea and wanted to join us today.'
 
@@ -467,9 +475,9 @@ The next day Alice brings Bob to the meeting and explains, 'I was telling Bob ab
 
 'Meanwhile, all of us may still think the order screens and functionality over to see if we haven't forgotten anything important. As we get confident it's good to go, I'll pass it on to development too.'
 
----
+## Conclusion
 
-This concludes the story. I hope you enjoyed reading it at least as much as I have enjoyed writing it!
+This concludes the story. Since you've made it thus far, I do hope you enjoyed reading it at least as much as I have enjoyed writing it!
 
 We have covered quite some ground here and at least touched on the following subjects:
 
@@ -479,14 +487,14 @@ We have covered quite some ground here and at least touched on the following sub
     - Tables and columns
     - Action buttons
 - Data model
-    - Attributes with status and data type
+    - Attributes, their status and data types
     - Relations
     - Data normalization and denormalization
 - Sample data and it's role in readability of the specification
 - The importance of [naming things](https://martinfowler.com/bliki/TwoHardThings.html)
 - Entity status as a means of driving its lifecycle
 
-But if there should be just one thing you take out of this read, I really hope it's this:
+However, if there should be just one thing you take out of this read, I really hope it's this:
 
 > Analyzing system requirements is a process.
 
@@ -495,3 +503,11 @@ It's not a one-time event. There's no way anyone can take a bullet-list of requi
 It takes time, the analytical effort must be duly invested and all the important decisions about what the system should actually do must be decided.
 
 These decisions must be taken in cooperation between someone from the development (the analyst) and someone who drives the product (the product owner). Only representatives of these two entities together are competent to make them.
+
+The decisions unfold themselves over the course of time. Humans need time to process the decisions already made, and these in turn lead to subsequent decisions yet to be made. It's important you walk along this path in due time so as not to stray away from it.
+
+I also hope this makes it obvious that the requirements should be analyzed before they are handed over to development. Leaving this task up to programmers is not a good idea, because the product owner must be involved in all those many seemingly "small" decisions. Also, the development sprint is not the time for the analytical process to take place. If you do that you will have virtually stalled the development itself, because the team will have to do the analysis and not enough time will be left for the development itself.
+
+Decouple the analytical process from the development process. Be a few steps ahead with the analysis. Once a feature feels "baked", or reasonably finished, move it to development. That does not mean to freeze the specification at that time, obviously. The spec will always continue to evolve and as it does, the app will have to follow the suit. It only means you will have some real specification of what the system should actually do, and hey, that's not a small feat at all!
+
+Finally, I do hope you have seen that a Functional Specification Document does not have to be a heavy, hundreds of pages long, incomprehensible document that takes months to write and by that time it's already outdated. On the contrary, it can actually be quite light-weight, straightforward, readable and live and still be able to facilitate the development (and testing and demos and bug fixing...) very nicely.
