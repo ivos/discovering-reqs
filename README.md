@@ -1,6 +1,16 @@
 # Discovering system requirements
 
-**Case study "Ordering system"**
+**Why would anyone bother with writing FSD on agile project?**
+
+Is Functional Specification Document an obsolete thing of the past? Or is there any point at all to bother with writing it? Is it a documentation chore that adds nothing meaningful to an agile project? Or could it actually help us with developing software?
+
+**TL;DR**
+
+> FSD is a fundamental enabler of team's agility.
+
+Sounds ridiculous? Read on to find out.
+
+---
 
 This is a fictional story.
 
@@ -451,17 +461,21 @@ The next day Alice brings Bob to the meeting and explains, 'I was telling Bob ab
 
 ### Table: Order items
 
-- Goods
+- Product
     - Cigar
     - Beer
     - Pizza
+- Unit price
+    - 1.6
+    - 0.36
+    - 6.5
 - Quantity
     - 6
     - 12
     - 1
-- Price
+- Item price
     - 9.6
-    - 4.4
+    - 4.32
     - 6.5
 ```
 
@@ -481,12 +495,12 @@ This concludes the story. Since you've made it thus far, I do hope you enjoyed r
 
 We have covered quite some ground here and at least touched on the following subjects:
 
-- Functional specification content: UI, Data model, Functionality
-- Screen mockups as the UI specification, with:
+- **Functional specification** content: UI, Data model, Functionality
+- **Screen mockups** as the UI specification, with:
     - Forms and fields
     - Tables and columns
     - Action buttons
-- Data model
+- **Data model**
     - Attributes, their status and data types
     - Relations
     - Data normalization and denormalization
@@ -504,13 +518,15 @@ It takes time, the analytical effort must be duly invested and all the important
 
 These decisions must be taken in cooperation between someone from the development (the analyst) and someone who drives the product (the product owner). Only representatives of these two entities together are competent to make them.
 
-The decisions unfold themselves over the course of time. Humans need time to process the decisions already made, and these in turn lead to subsequent decisions yet to be made. It's important you walk along this path in due time so as not to stray away from it.
+The decisions unfold themselves over the course of time. Humans need time to process the decisions already made, and these in turn lead to subsequent decisions yet to be made. It's important you walk along this path in due time, if you try to rush it, you usually stray away from it.
 
-I also hope this makes it obvious that the requirements should be analyzed before they are handed over to development. Leaving this task up to programmers is not a good idea, because the product owner must be involved in all those many seemingly "small" decisions. Also, the development sprint is not the time for the analytical process to take place. If you do that you will have virtually stalled the development itself, because the team will have to do the analysis and not enough time will be left for the development itself.
+I also hope this makes it obvious that the requirements should be analyzed before they are handed over to development. Leaving this task up to programmers is not a good idea, because the product owner must be involved in all those many seemingly "small" decisions. Moreover, the development sprint is not the time for the analytical process to take place. If you do that you will have virtually stalled the development itself, because the team will have to do the analysis and not enough time will be left for the development itself. Not much agility there.
 
 Decouple the analytical process from the development process. Be a few steps ahead with the analysis. Once a feature feels "baked", or reasonably finished, move it to development. That does not mean to freeze the specification at that time, obviously. The spec will always continue to evolve and as it does, the app will have to follow the suit. It only means you will have some real specification of what the system should actually do, and hey, that's not a small feat at all!
 
-Finally, I do hope you have seen that a Functional Specification Document does not have to be a heavy, hundreds of pages long, incomprehensible document that takes months to write and by that time it's already outdated. On the contrary, it can actually be quite light-weight, straightforward, readable and live and still be able to facilitate the development (and testing and demo expectations and bug fixing...) very nicely.
+Finally, I do hope you have seen that a Functional Specification Document does not have to be a heavy, hundreds of pages long, incomprehensible document that takes months to write and by that time is already outdated. On the contrary, it can actually be quite light-weight, straightforward, readable and live and still be able to facilitate the development (and testing and demo expectations and bug fixing...) very nicely.
+
+Actually, writing the FSD is the fastest way of discovering the true system requirements.
 
 ## Next steps
 
