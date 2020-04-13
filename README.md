@@ -20,7 +20,7 @@ The two of you claim a small conference room and convene there after the lunch.
 
 'I was thinking, could we have some sort of overview of pending orders? I mean, most of the time it's OK, but once in a blue moon I feel there's just a bit too many of them.' After a moment of consideration, she adds: 'And very exceptionally, some of them somehow fall through the cracks. You know, I send each new order over to Bob at the fulfillment department as an email attachment, but some email just got lost.'
 
-'Uh-huh,' you fire up you analytical tool and start drafting it out, 'so there would be sort of a table, listing the orders, right? Let's see. What data do we have in that table? The customer, the order date, what else?'
+'Uh-huh,' you fire up you analytical tool that lets you write functional specification in Markdown enhanced with a few keywords that let you generate screen mockups and other things and start drafting it out, 'so there would be sort of a table, listing the orders, right? Let's see. What data do we have in that table? The customer, the order date, what else?'
 
 'Well, what did they order, the quantity and the price, of course.'
 
@@ -232,7 +232,7 @@ That effectively ruins your clever idea of suggesting customer names. The custom
 
 'Actually not,' disagrees Alice, 'there's an Excel file with all our products and when there's a change, I get it from Carol at the purchasing. So I was hoping we could upload this file so that I don't have to type the products in, right?'
 
-'I see, sure, that's the right idea, we don't want to introduce unnecessary typos in, say, the price, do we. So instead, there will be a screen to upload the Excel file of... Wait a sec, did you just called them products instead of goods?'
+'I see, sure, that's the right idea, we don't want to introduce unnecessary typos in, say, the price. So instead, there will be a screen to upload the Excel file of... Wait a sec, did you just called them products instead of goods?'
 
 'Yeah, why not, it's the same thing.'
 
@@ -314,7 +314,7 @@ The next day Alice brings Bob to the meeting and explains, 'I was telling Bob ab
 
 'But before we get to Bob,' Alice continues, 'I was thinking about this "denormalization" thing you were talking about yesterday. What if the customer moves and their delivery address changes? And what if they usually want to deliver to their home address, but on one specific occasion they want to deliver to their job?'
 
-'Hmmm, these are some very good questions,' you answer. 'If they move, you would probably want to change their address on the customer record, so that next time you create an order for them, the new address will be picked up. We need to keep the older orders intact, however, just as we did with the item price, so we have to duplicate the customer address onto the order.'
+'Hmmm, these are some very good questions,' you say. 'If they move, you would probably want to change their address on the customer record, so that next time you create an order for them, the new address will be picked up. We need to keep the older orders intact, however, just as we did with the item price, so we have to duplicate the customer address onto the order.'
 
 'As for the temporarily different address for a special occasion, we would have to let you amend the address on the order manually, which means we need an editable address field on the Create order form.'
 
@@ -510,4 +510,18 @@ I also hope this makes it obvious that the requirements should be analyzed befor
 
 Decouple the analytical process from the development process. Be a few steps ahead with the analysis. Once a feature feels "baked", or reasonably finished, move it to development. That does not mean to freeze the specification at that time, obviously. The spec will always continue to evolve and as it does, the app will have to follow the suit. It only means you will have some real specification of what the system should actually do, and hey, that's not a small feat at all!
 
-Finally, I do hope you have seen that a Functional Specification Document does not have to be a heavy, hundreds of pages long, incomprehensible document that takes months to write and by that time it's already outdated. On the contrary, it can actually be quite light-weight, straightforward, readable and live and still be able to facilitate the development (and testing and demos and bug fixing...) very nicely.
+Finally, I do hope you have seen that a Functional Specification Document does not have to be a heavy, hundreds of pages long, incomprehensible document that takes months to write and by that time it's already outdated. On the contrary, it can actually be quite light-weight, straightforward, readable and live and still be able to facilitate the development (and testing and demo expectations and bug fixing...) very nicely.
+
+## Next steps
+
+The model specification we have seen being formed in the story is not finished. Even the Product upload feature, which is supposedly ready for development, is not really clear yet. How do we upload the Excel file? We should consider at least the following changes: adding new product, modification of an existing product, deletion of a product (what about order items that refer to it?).
+
+What other improvements do YOU expect to be made?
+
+For actions with substantial functionality it could be beneficial to transform the simplistic functional notes in the screen spec into a use case, which is a more formalized way of describing system functionality. In our spec, the "Create order" and "Upload products" are prime examples of that. Converting those into proper use cases will improve the clarity of the spec.
+
+## The tool
+
+If you think that having an analytical tool that let's you write some simple Markdown text to easily and instantly create screen mockups, specify data model or write use cases is a good idea, you are in luck.
+
+Check out CaseFu, a tool that I have created and used for all the examples in the story, at https://casefu.com/.
